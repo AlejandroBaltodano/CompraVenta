@@ -1,0 +1,93 @@
+﻿@model CompraVenta.UI.Models.AbonoModels
+
+@{
+    ViewBag.Title = "DetalleAbonos";
+}
+
+<h2>Detalle Abono</h2>
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreClientes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreClientes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPrestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaPrestamo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVencimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVencimiento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadDias)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadDias)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PorcentajeInteres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PorcentajeInteres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadPrestada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadPrestada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoPendientePago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoPendientePago)
+        </dd>
+
+        <dt>
+        Monto del abono
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monto)
+        </dd>
+
+        <dt>
+        Fecha del abono
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuario)
+        </dd>
+    </dl>
+</div>
+<p>
+  
+    @Html.ActionLink("Regresar a Buscar los Préstamos de un Cliente", "BuscarPrestamoCedulaCliente")
+</p>

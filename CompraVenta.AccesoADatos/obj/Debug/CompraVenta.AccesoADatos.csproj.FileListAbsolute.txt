@@ -1,0 +1,12 @@
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\bin\Debug\CompraVenta.AccesoADatos.dll.config
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\bin\Debug\CompraVenta.AccesoADatos.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\bin\Debug\CompraVenta.AccesoADatos.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\bin\Debug\CompraVenta.Model.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\bin\Debug\EntityFramework.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\bin\Debug\CompraVenta.Model.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\bin\Debug\EntityFramework.xml
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\obj\Debug\CompraVenta.AccesoADatos.csprojResolveAssemblyReference.cache
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\obj\Debug\CompraVenta.AccesoADatos.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.AccesoADatos\obj\Debug\CompraVenta.AccesoADatos.pdb

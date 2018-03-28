@@ -1,0 +1,146 @@
+﻿@model CompraVenta.UI.Models.ClienteModels
+
+
+@{
+    ViewBag.Title = "NuevoCliente";
+}
+
+<h2>Nuevo Cliente</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <br /> <label for="Cedula">Cedula:</label><br />
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Cedula, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Cedula, "", new { @class = "text-danger" })
+                <div class="text-danger" id="AlertaCedula"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <br /> <label for="NombreCompleto">Nombre:</label><br />
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NombreCompleto, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NombreCompleto, "", new { @class = "text-danger" })
+                <div class="text-danger" id="AlertaNombreCompleto"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <br /> <label for="Direccion">Dirección:</label><br />
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+                <div class="text-danger" id="AlertaDireccion"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <br /> <label for="Telefono1">Telefono 1:</label><br />
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Telefono1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Telefono1, "", new { @class = "text-danger" })
+                <div class="text-danger" id="AlertaTelefono1"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <br /> <label for="Telefono2">Telefono 2:</label><br />
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Telefono2, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Telefono2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <br /> <label for="Email">Email:</label><br />
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                <div class="text-danger" id="AlertaEmail"></div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Crear" id="btnCrear" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Regresar a la Lista de Clientes", "ListaDeLosClientes")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+    $(document).ready(function () {
+        $('#Cedula').numeric();
+        $('#Telefono1').numeric();
+        $('#Telefono2').numeric();
+
+        $(function () {
+            $("#btnCrear").click(function (e) {
+
+                $("form").find("text-danger").hide();
+                if ($("#Cedula").val().length == 0) {
+                    e.preventDefault();
+
+                }
+                if ($("#Cedula").val().length == 0) {
+                    $("#AlertaCedula").show();
+                    $("#AlertaCedula").html("Cedula es Requerida");
+                }
+                if ($("#NombreCompleto").val().length == 0) {
+                    e.preventDefault();
+
+                }
+                if ($("#NombreCompleto").val().length == 0) {
+                    $("#AlertaNombreCompleto").show();
+                    $("#AlertaNombreCompleto").html("Nombre Completo es Requerido");
+                }
+                if ($("#Direccion").val().length == 0) {
+                    e.preventDefault();
+
+                }
+                if ($("#Direccion").val().length == 0) {
+                    $("#AlertaDireccion").show();
+                    $("#AlertaDireccion").html("Direccion es Requerido");
+                }
+                if ($("#Telefono1").val().length == 0) {
+                    e.preventDefault();
+
+                }
+                if ($("#Telefono1").val().length == 0) {
+                    $("#AlertaTelefono1").show();
+                    $("#AlertaTelefono1").html("El Telefono es Requerido");
+                }
+                if ($("#Telefono1").val().length == 0) {
+                    e.preventDefault();
+
+                }
+                if ($("#Email").val().length == 0) {
+                    $("#AlertaEmail").show();
+                    $("#AlertaEmail").html("El Email es Requerido");
+                }
+
+
+            });
+
+        })
+    });
+
+
+    </script>
+}
+

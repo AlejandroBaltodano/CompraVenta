@@ -1,0 +1,16 @@
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\CompraVenta.LogicaDeNegocio.Pruebas.dll.config
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\CompraVenta.LogicaDeNegocio.Pruebas.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\CompraVenta.LogicaDeNegocio.Pruebas.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\CompraVenta.LogicaDeNegocio.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\CompraVenta.Model.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\EntityFramework.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\CompraVenta.AccesoADatos.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\CompraVenta.LogicaDeNegocio.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\CompraVenta.Model.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\EntityFramework.xml
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\bin\Debug\CompraVenta.AccesoADatos.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\obj\Debug\CompraVenta.LogicaDeNegocio.Pruebas.csprojResolveAssemblyReference.cache
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\obj\Debug\CompraVenta.LogicaDeNegocio.Pruebas.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio.Pruebas\obj\Debug\CompraVenta.LogicaDeNegocio.Pruebas.pdb

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<CompraVenta.UI.Models.PrestamosModels>
+
+@{
+    ViewBag.Title = "PrestamosPorCriterio";
+}
+
+<h3>Busqueda de prestamos</h3>
+
+
+@using (Html.BeginForm("PrestamosPorCriterio", "Prestamos", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Criterios de búsqueda</legend>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Label("buscar", "Por cedula de cliente:")
+        @Html.TextBox("cedula", null, new { id = "buscar" })
+        
+   
+        @Html.Label("FechaDesde", "Fecha Desde:")
+        <input type="date" name="fechaInicio" />
+        @Html.Label("FechaHasta", "Fecha Hasta:")
+        <input type="date" name="fechaHasta" />
+
+        <br />
+        @Html.Label("Estado", "Estados:")
+        <div class="form-group">
+            <select name="estado">
+                <option value="--" selected>Seleccione un Estado...</option>
+                <option value="Vencido">Vencido</option>
+                <option value="NoVencido">No vencido</option>
+            </select>
+        </div>
+
+        <input id="btnBuscarCliente" type="submit" value="Buscar" />
+      
+    </fieldset>
+}
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CedulaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaVencimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantidadPrestada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlazoDiasPrestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoPendienteDePago)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CedulaCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaVencimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadPrestada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlazoDiasPrestamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoPendienteDePago)
+        </td>
+    </tr>
+}
+
+</table>

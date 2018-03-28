@@ -1,0 +1,11 @@
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\bin\Debug\CompraVenta.LogicaDeNegocio.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\bin\Debug\CompraVenta.LogicaDeNegocio.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\bin\Debug\CompraVenta.AccesoADatos.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\bin\Debug\CompraVenta.Model.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\bin\Debug\EntityFramework.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\bin\Debug\CompraVenta.AccesoADatos.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\bin\Debug\CompraVenta.Model.pdb
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\bin\Debug\EntityFramework.xml
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\obj\Debug\CompraVenta.LogicaDeNegocio.csprojResolveAssemblyReference.cache
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\obj\Debug\CompraVenta.LogicaDeNegocio.dll
+C:\Users\Creyes\Documents\Visual Studio 2015\Projects\CompraVenta\CompraVenta.LogicaDeNegocio\obj\Debug\CompraVenta.LogicaDeNegocio.pdb

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CompraVenta.UI.Models.AbonoModels>
+
+@{
+    ViewBag.Title = "ListaDeAbonosDelPrestamoDelCliente";
+}
+
+<h2>Lista de Abonos del Préstamo</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Monto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Monto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LosEstadosDelAbono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @if (item.Estado == 1)
+                {
+                    @Html.ActionLink("Anular Abono", "AnularAbono", new { id = item.Id }) <text>|</text> @Html.ActionLink("Detalles", "DetalleAbonos", new { id = item.Id })
+                }
+                else
+                {
+                    <label>Abono Anulado</label> <text>|</text> @Html.ActionLink("Detalles", "DetalleAbonos", new { id = item.Id })
+                }
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Regresar a Buscar los Préstamos de un Cliente", "BuscarPrestamoCedulaCliente")
+</div>

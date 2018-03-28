@@ -1,0 +1,111 @@
+﻿@model IEnumerable<CompraVenta.UI.Models.PrestamosModels>
+
+@{
+    ViewBag.Title = "ListaDePréstamosDelClientePorCedula";
+}
+
+<h2>Lista de Préstamos del Cliente</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CedulaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreClientes)
+        </th>
+        <th>
+            Fecha del préstamo
+        </th>
+        <th>
+            Fecha de vencimiento
+        </th>
+        <th>
+            Cantidad de días
+        </th>
+        <th>
+            Porcentaje de interés
+        </th>
+        <th>
+            Cantidad prestada
+        </th>
+        <th>
+            Monto Pendiente de pago
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CedulaCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreClientes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaVencimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlazoDiasPrestamo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PorcentajeIntereses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadPrestada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MontoPendienteDePago)
+            </td>
+            <td>
+                @Html.ActionLink("Lista de Abonos del Préstamo", "ListaDeAbonosDelPrestamoDelCliente", new { id = item.Id }) |
+                @Html.ActionLink("Abonar al Préstamo", "AbonarAlPrestamo", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Regresar a Buscar los Préstamos de un Cliente", "BuscarPrestamoCedulaCliente")
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+    $(document).ready(function () {
+        $('#buscar').numeric();
+
+        $(function () {
+            $("#btnBuscarCliente").click(function (e) {
+
+                $("form").find("text-danger").hide();
+                if ($("#buscar").val().length == 0) {
+                    e.preventDefault();
+
+                }
+                if ($("#buscar").val().length == 0) {
+                    $("#AlertaCedula").show();
+                    $("#AlertaCedula").html("Cedula es Requerida");
+                }
+
+
+
+            });
+
+        })
+    });
+
+
+    </script>
+}
+
+

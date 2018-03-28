@@ -1,0 +1,140 @@
+﻿@model IEnumerable<CompraVenta.UI.Models.ClienteModels>
+
+@{
+    ViewBag.Title = "ListaDeLosClientesPorCedula";
+}
+
+<h2>Lista de Clientes por Cedula</h2>
+
+
+@using (Html.BeginForm("ListaDeLosClientesPorCedula", "Clientes", FormMethod.Post))
+{
+    <fieldset>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Label("buscar", "Cedula a buscar:")
+        @Html.TextBox("buscar", null, new { id = "buscar" }) <input type="submit" value="Buscar" class="btn btn-primary" />
+        <div class="text-danger" id="AlertaCedula"></div>
+
+    </fieldset>
+}
+<br />
+@using (Html.BeginForm("ListaDeLosClientesPorCedula", "Clientes", FormMethod.Get))
+{
+    <fieldset>
+  <input type="submit" value="Mostrar Todos" class="btn btn-primary" />
+    
+    </fieldset>
+}
+<hr />
+
+@{string cedula = ""; }
+@foreach (var existeCedula in Model)
+{
+    cedula = existeCedula.Cedula;
+}
+
+@if (cedula.Equals(""))
+{
+    <text><h2>Cedula Incorrecta.</h2> </text>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCompleto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono1)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreCompleto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LosEstadosDelCliente)
+                </td>
+
+                <td>
+                    @if (item.Estado == 1)
+                    {
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) <text>|</text> @Html.ActionLink("Inactivar", "InactivarCliente", new { id = item.Id })
+
+                    }
+                    else
+                    {
+
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) <text>|</text> @Html.ActionLink("Activar", "ActivarCliente", new { id = item.Id })
+                    }
+
+
+                </td>
+            </tr>
+        }
+
+    </table>
+
+}
+
+
+
+
+<p>
+    @Html.ActionLink("Regresar a la Lista de Clientes", "ListaDeLosClientes")
+</p>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+
+        $(document).ready(function () {
+            $('#buscar').numeric();
+            $(function () {
+                $("#btnBuscarCliente").click(function (e) {
+
+                    $("form").find("text-danger").hide();
+                    if ($("#buscar").val().length == 0) {
+                        e.preventDefault();
+
+                    }
+                    if ($("#buscar").val().length == 0) {
+                        $("#AlertaCedula").show();
+                        $("#AlertaCedula").html("Cedula es Requerida");
+                    }
+
+                })
+
+            });
+        });
+
+    </script>
+}

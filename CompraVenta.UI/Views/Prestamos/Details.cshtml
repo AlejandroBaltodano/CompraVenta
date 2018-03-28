@@ -1,0 +1,91 @@
+﻿@model CompraVenta.UI.Models.PrestamosModels
+
+@{
+    ViewBag.Title = "DetallePréstamos";
+}
+
+<h2>Detalles del Préstamo</h2>
+
+<div>
+ 
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CedulaCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CedulaCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreClientes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreClientes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVencimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaVencimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlazoDiasPrestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlazoDiasPrestamo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PorcentajeIntereses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PorcentajeIntereses)%
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CantidadPrestada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CantidadPrestada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MontoPendienteDePago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MontoPendienteDePago)
+        </dd>
+
+        <div> @Html.Partial("ListarAbonos",Model.AbonosDelPrestamo) </div>
+
+    </dl>
+</div>
+<p>
+   
+    @Html.ActionLink("Regresar a la lista de Préstamo", "Index")
+</p>

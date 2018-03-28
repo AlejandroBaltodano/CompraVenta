@@ -1,0 +1,80 @@
+﻿@model IEnumerable<CompraVenta.UI.Models.PrestamosModels>
+
+@{
+    ViewBag.Title = "ListaDePrestamos";
+}
+
+<h2>Lista de Préstamos </h2>
+
+<p>
+    @Html.ActionLink("Nuevo Préstamo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CedulaCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaVencimiento)
+        </th>
+        <th>
+            Cantidad prestada
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlazoDiasPrestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MontoPendienteDePago)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CedulaCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaVencimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CantidadPrestada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlazoDiasPrestamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MontoPendienteDePago)
+        </td>
+       
+        <td>
+            @{  DateTime fechaLimite = item.Fecha; ; }
+            @if (fechaLimite.ToString("dd/MM/yyyy") == DateTime.Now.ToString("dd/MM/yyyy"))
+            {
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) <text>|</text> @Html.ActionLink("Detalles", "Details", new { id = item.Id })
+            }
+            else
+            {
+            @Html.ActionLink("Detalles", "Details", new { id = item.Id })
+            }
+       
+           
+           
+        </td>
+    </tr>
+}
+
+</table>

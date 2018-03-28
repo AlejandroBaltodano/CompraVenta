@@ -1,0 +1,75 @@
+﻿@model IEnumerable<CompraVenta.UI.Models.ClienteModels>
+
+@{
+    ViewBag.Title = "ListaDeLosClientes";
+}
+
+<h2>Lista De Clientes</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Cliente", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono1)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LosEstadosDelCliente)
+            </td>
+
+            <td>
+                @if (item.Estado == 1)
+                {
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) <text>|</text> @Html.ActionLink("Inactivar", "InactivarCliente", new { id = item.Id })  
+              
+                }
+                else
+                {
+                
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) <text>|</text> @Html.ActionLink("Activar", "ActivarCliente", new { id = item.Id })
+                } 
+               
+            </td>
+        </tr>
+    }
+
+</table>
