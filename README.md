@@ -13,4 +13,4 @@ y pago final, así como la tasa de interés que se va a establecer. Se le aclara
 (en este caso es necesario identificarse, pagar la cantidad prestada inicialmente, más los intereses) y bajo cuáles condiciones
 puede perderlo definitivamente. Finalmente se firma un contrato en donde queda asentado por escrito todo lo anterior.
 
-Para conocer mas sobre el sistema, favor <a>presione aquí</a>
+Para conocer mas sobre el sistema, favor <a href="https://github.com/AlejandroBaltodano/CompraVenta/blob/master/Manual%20Sistema%20Web%20CompraVenta.pdf">presione aquí</a>
